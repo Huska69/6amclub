@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6AM Club</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0a0a0a;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .time {
+            font-size: 12rem;
+            font-weight: bold;
+            color: white;
+            letter-spacing: -2px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+                         0 0 20px rgba(255, 255, 255, 0.5),
+                         0 0 30px rgba(255, 255, 255, 0.3),
+                         0 0 40px rgba(0, 195, 255, 0.3),
+                         0 0 70px rgba(0, 195, 255, 0.2);
+            animation: pulse 2s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+                            0 0 20px rgba(255, 255, 255, 0.5),
+                            0 0 30px rgba(255, 255, 255, 0.3),
+                            0 0 40px rgba(0, 195, 255, 0.3),
+                            0 0 70px rgba(0, 195, 255, 0.2);
+            }
+            100% {
+                text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+                            0 0 25px rgba(255, 255, 255, 0.7),
+                            0 0 35px rgba(255, 255, 255, 0.5),
+                            0 0 45px rgba(0, 195, 255, 0.5),
+                            0 0 80px rgba(0, 195, 255, 0.4);
+            }
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 0 10px rgba(0, 195, 255, 0.2);
+        }
+        
+        .btn:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 15px rgba(0, 195, 255, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .social {
+            position: absolute;
+            bottom: 30px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social:hover {
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        .glow-circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 195, 255, 0.1) 0%, rgba(0, 195, 255, 0) 70%);
+            z-index: -1;
+            filter: blur(40px);
+            animation: float 8s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-20px) scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-circle" style="top: 30%; left: 30%;"></div>
+    <div class="glow-circle" style="top: 50%; left: 60%; animation-delay: -4s;"></div>
+    
+    <div class="container">
+        <div class="time">6AM</div>
+        
+        <div class="buttons">
+            <a href="https://maps.app.goo.gl/sTMx7HYhFGvXDtdb8" target="_blank" class="btn">
+                LOCATION
+            </a>
+        </div>
+    </div>
+    
+    <a href="https://www.instagram.com/6amclub2025/" target="_blank" class="social">
+        @6amclub2025
+    </a>
+</body>
+</html>
